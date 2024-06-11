@@ -1,0 +1,76 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "billingAcctID": {
+            "value": ""
+        },
+        "subscriptions": {
+            "value": [
+                {
+                    "name": "diconium-ro-internal-projects",
+                    "budgetAmountPerSubscription": 300,
+                    "budgetNotificationPercentage": 80,
+                    "vnetPeeringEnabled": false,
+                    "vnets": [
+                        {
+                            "name": "vnet1",
+                            "cidr": "10.0.0.0/16",
+                            "bastionEnabled": false,
+                            "subnets": [
+                                {
+                                    "name": "subnet1",
+                                    "cidr": "10.0.1.0/24",
+                                    "allowPublicAccess": false,
+                                    "allowInternetAccess": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "diconium-ro-internal-training",
+                    "budgetAmountPerSubscription": 300,
+                    "budgetNotificationPercentage": 80,
+                    "vnetPeeringEnabled": false,
+                    "vnets": [
+                        {
+                            "name": "vnet1",
+                            "cidr": "10.1.0.0/16",
+                            "bastionEnabled": false,
+                            "subnets": [
+                                {
+                                    "name": "subnet1",
+                                    "cidr": "10.1.1.0/24",
+                                    "allowPublicAccess": false,
+                                    "allowInternetAccess": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "diconium-ro-internship",
+                    "budgetAmountPerSubscription": 300,
+                    "budgetNotificationPercentage": 80,
+                    "vnetPeeringEnabled": false,
+                    "vnets": [
+                        {
+                            "name": "vnet1",
+                            "cidr": "10.2.0.0/16",
+                            "bastionEnabled": false,
+                            "subnets": [
+                                {
+                                    "name": "subnet1",
+                                    "cidr": "10.2.1.0/24",
+                                    "allowPublicAccess": false,
+                                    "allowInternetAccess": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
